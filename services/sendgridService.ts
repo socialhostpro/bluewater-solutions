@@ -10,9 +10,16 @@ import { FormData } from '../types';
 
 export const sendQuoteEmail = async (data: FormData): Promise<{ success: boolean; message: string }> => {
   const API_KEY = process.env.SENDGRID_API_KEY;
-  // Note: Standard environment loading usually picks the last defined value if keys are duplicated.
-  // In the provided .env, NOTIFICATION_EMAIL1 is defined multiple times.
-  const TO_EMAIL = process.env.NOTIFICATION_EMAIL1;
+  const SENDER_EMAIL = process.env.SENDER_EMAIL || 'quotes@bluewatersolutions.com';
+
+  // Collect all notification emails from environment
+  const notificationEmails = [
+    process.env.NOTIFICATION_EMAIL1,
+    process.env.NOTIFICATION_EMAIL2,
+    process.env.NOTIFICATION_EMAIL3,
+  ].filter(Boolean) as string[];
+
+  const TO_EMAIL = notificationEmails[0];
 
   if (!API_KEY) {
     console.error('SendGrid API Key is missing in environment variables.');
@@ -109,10 +116,10 @@ export const sendQuoteEmail = async (data: FormData): Promise<{ success: boolean
       },
       body: JSON.stringify({
         personalizations: [{
-          to: [{ email: TO_EMAIL }]
+          to: notificationEmails.map(email => ({ email }))
         }],
-        from: { 
-          email: 'quotes@bluewatersolutions.com',
+        from: {
+          email: SENDER_EMAIL,
           name: 'BlueWater Leads'
         },
         subject: `🚨 New Lead: ${data.fullName} - ${data.eventType}`,

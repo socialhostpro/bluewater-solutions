@@ -12,7 +12,12 @@ export default defineConfig(({ mode }) => {
       plugins: [react()],
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'process.env.SENDGRID_API_KEY': JSON.stringify(env.SENDGRID_API_KEY),
+        'process.env.NOTIFICATION_EMAIL1': JSON.stringify(env.NOTIFICATION_EMAIL1),
+        'process.env.NOTIFICATION_EMAIL2': JSON.stringify(env.NOTIFICATION_EMAIL2),
+        'process.env.NOTIFICATION_EMAIL3': JSON.stringify(env.NOTIFICATION_EMAIL3),
+        'process.env.SENDER_EMAIL': JSON.stringify(env.SENDER_EMAIL),
       },
       resolve: {
         alias: {
