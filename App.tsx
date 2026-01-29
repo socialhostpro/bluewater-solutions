@@ -10,6 +10,7 @@ import DisasterRelief from './pages/DisasterRelief';
 import Festivals from './pages/Festivals';
 import Construction from './pages/Construction';
 import BBQParties from './pages/BBQParties';
+import Contact from './pages/Contact';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -35,6 +36,7 @@ const App: React.FC = () => {
             <Route path="/construction" element={<Construction />} />
             <Route path="/bbq-parties" element={<BBQParties />} />
             <Route path="/quote" element={<Quote />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
     { name: 'BBQ & Parties', path: '/bbq-parties' },
     { name: 'Festivals', path: '/festivals' },
     { name: 'Disaster Relief', path: '/disaster-relief' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
