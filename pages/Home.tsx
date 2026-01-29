@@ -91,7 +91,7 @@ const Home: React.FC = () => {
               <img 
                 alt="Clean portable unit lineup" 
                 className="rounded-3xl shadow-2xl w-full" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU0ctDsR3atL3qxGg9wkAWsI_yRrKI3QfRduW-po_3cCf_8VTXNmOsG5FUxy5qp0tZk1HK3Mv-szuUnqKtny8X-a9F-TMOIfrsdIKprZkMZgEjeRciVjVJDqhmICjiQREi0EJam7A8NEcY_NG2gWvWrMwzoMBp5hBkUVX3rTKLbT9FaYwzAM1PaouCMwrC0y97Hg_NgdtGzZ0B3sy1JmItxOJy6QMD39fjUWgCF-ui_TjDGyMgQTZdn6rubBkGD4NGr5_D7RqRHshA" 
+                src="/imgs/1.png" 
               />
             </div>
             <div className="lg:w-1/2">
