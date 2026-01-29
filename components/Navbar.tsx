@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
               <img 
                 alt="BlueWater Solutions" 
                 className="h-14 w-auto" 
-                src="/logo.png" 
+                src="/imgs/logo.png" 
               />
             </Link>
           </div>
