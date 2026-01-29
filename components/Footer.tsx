@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               <img 
                 alt="BlueWater Logo" 
                 className="h-16 w-auto" 
-                src="logo.png" 
+                src="/logo.png" 
               />
             </div>
             <p className="text-slate-600 dark:text-slate-400">
